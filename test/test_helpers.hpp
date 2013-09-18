@@ -155,7 +155,7 @@ namespace frenzy
       if (!u)
 	return T();
 
-      T ret = dom_cast<typename T::value_type>(u);
+      T ret = dom_cast<typename T::element_type>(u);
       BOOST_REQUIRE_MESSAGE(ret, "Node cast failed, type is " << u->get_nodeType());
       return ret;
     }
